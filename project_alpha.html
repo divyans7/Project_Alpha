@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Requeue Tracker</title>
+<style>
+
+/*body {
+     background-image: url("https://www.accenture.com//www.accenture.com/t20170207T141423Z__w__/nl-en/_acnmedia/Accenture/Conversion-Assets/DotCom/Images/Global/Dualpub_124/Accenture-Six-Distinctions-forward-mark.png");
+    text-align: center;
+    color: black;
+    background-size: 2500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*/ 
+
+/* Style inputs, select elements and textareas */
+
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 5px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 50px 20px 50px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<h1 align= "center">Genuine Passes</h1>
+
+
+
+<div class="container">
+<form>
+
+
+
+<div class="row">
+      <div class="col-25"> <label>Customer Type </label>
+      </div>
+      <div class="col-75">
+ <input type="radio" name="ACC_type" value="NC"> NC 
+ <input type="radio" name="ACC_type" value="VC"> VC
+ <input type="radio" name="ACC_type" value="TC"> TC
+</div></div><br>
+
+<div class="row">
+      <div class="col-25"> <label> ATO </label>
+      </div>
+      <div class="col-75">
+ <input type="radio" name="+ATO" value="NC"> ATO
+ <input type="radio" name="-ATO" value="VC"> No ATO
+</div></div><br>
+
+
+<div class="row">
+      <div class="col-25">
+<label>Reason of Suspicion : </label>
+</div>
+<div class="col-75">
+<select name="Reason of Suspicion">
+    <option value="Order Quantity">Order Quantity</option>
+    <option value="High Price Item">High Price Item</option>
+    <option value="High Payment Velocity" selected>High Payment Velocity</option>
+    <option value="Added new CC">Added new CC</option>
+    <option value="DRS 07/27">DRS 07/27</option>
+  </select> 
+</div>
+</div> <br>
+
+
+<div class="row">
+      <div class="col-25"> <label> Time Zone Change </label>
+      </div>
+      <div class="col-75">
+ <input type="radio" name="TimeZone" value="Trusted Time Zone"> Trusted Time Zone 
+ <input type="radio" name="TimeZone" value="Targus NAP Match"> Targus NAP Match
+</div>
+</div><br>
+
+<div class="row">
+      <div class="col-25">
+        <label> AVS </label>
+        </div>
+        <div class="col-75"> 
+ <input type="radio" name="AVS" value="i1"> i1 
+ <input type="radio" name="AVS" value="i3"> i3
+</div>
+</div><br>
+
+
+<div class="row">
+      <div class="col-25">
+
+<label> Address </label>
+</div>
+<div class="col-75">
+ <input type="radio" name="Address" value="Old Address"> Old Address 
+ <input type="radio" name="Address" value="New Address"> New Address
+</div>
+</div><br>
+
+
+<div class="row">
+      <div class="col-25">
+       <label> Payment Type </label></div>
+       <div class="col-75">
+ <input type="radio" name="Payment Type" value="New"> New 
+ <input type="radio" name="Payment Type" value="Old"> Old
+</div>
+</div><br>
+
+
+<div class="row">
+      <div class="col-25">
+<label>Product Price: </label>
+</div>
+<div class="col-75">
+<select name="Product Price">
+    <option value="Less than two month old OH">Less than two month old OH</option>
+    <option value="Less than E-check Amount">Less than E-check Amount</option>
+  </select>
+</div>
+</div> <br>
+
+
+
+<div class="row">
+      <div class="col-25">
+<label>Product Type </label>
+      </div> 
+      <div class="col-75">
+<label><input type="checkbox" name="Payment Type" value="Corresponds Order History"> Corresponds Order History</label> 
+<label><input type="checkbox" name="Payment Type" value="Discounted Items"> Discounted Items</label>
+<label><input type="checkbox" name="Payment Type" value="Non Risky"> Non Risky</label>
+</div>
+</div> <br>
+
+
+<div class="row">
+      <div class="col-25">
+<label>Order Frequency </label></div>
+<div class="col-75">
+<select name="Order Frequency">
+    <option value="Same ordering pattern">Same ordering pattern</option>
+    <option value="High Price Item"> Less than 5 orders in last 5 days </option>
+  </select>
+</div>
+</div> <br>
+
+
+
+
+
+<div>
+</div>
+
+    <div class="row">
+      <input type="submit" value="This is a confirm pass situation">
+    </div>
+
+</form>
+</div>
+</body>
+</html>
